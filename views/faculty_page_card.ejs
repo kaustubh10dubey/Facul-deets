@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty-Details-Outer</title>
+
+     <!-- Style Sheets -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     <link rel="stylesheet" href="/css/faculty_page_card_styles.css">
+     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300;400;700&display=swap" rel="stylesheet">
+     <!-- PT Serif font -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <section id="top-container">
+
+        <div class="nav">
+            <div class = "header">
+                <img src="/Images/vit bhopal logo white text.png">
+                <div> | </div>
+                <div> Facul-Deets </div>    
+                <div class="header-facultyLogin"> <a href="/login">Login as Faculty</a> </div>
+                <!-- <span> | </span>
+                <span> Facul-Deets </span> -->
+            </div>
+            <div class="text-container">
+                <div class="c1"><a href="/">About Us</a></div>
+                <div class="c2"><a href="/faculty_page/">Faculty Details</a></div>
+                <!-- <div class="c3"><a href="">Events</a></div>
+                <div class="c4"><a href="">Projects</a></div> -->
+            </div>
+        </div>
+
+
+
+        <div class="middle-container">
+
+            <div class="sort">
+                <a class="body-anchor" href="/faculty_page/"><span>Filter by: <strong>Department</strong></span></a>
+                <a class="body-anchor" href="/faculty_page/card/"><span>Filter by: <strong>Cards</strong></span></a>
+                <form class="search-form" method="POST">
+                    <input type="text" style="background-color: black;" name="search" placeholder="Search with id...."/>
+                    <button type="submit" style="color:black ;">Click me</button>
+                </form>
+            </div>
+            <div class="middle-container-card">
+
+
+                <%array.forEach(function(element){ %>
+                    <div class="card col-lg-6" style="width: 25rem;">
+                        <img src="/Vectors/profile.png" class="card-img-top" alt="...">
+                        <div class="card-body ">
+                        <h5 class="card-title"><%=element.name%></h5>
+                        <p class="card-text"><%=element.id%> , <%=element.school%></p>
+                        <p class="card-text">Cabin: <%=element.cabin%></p>
+                        <a href="/faculty_page/<%=element.id%>" class="btn btn-primary card-anchor">View Details</a>
+                        </div>
+                    </div>
+                <%});%>
+
+                
+            </div>
+
+              
+
+
+
+
+              
+        </div>
+
+    </section>
+
+    <section id="bottom-container">
+        <div class="bottom-image-container">
+        <div class="bottom-image-container-1">
+            <div class="bottom-social social-1">
+                <a href="https://in.linkedin.com/company/vit-bhopal-university" target="_blank"><div class="social-container"><img class="social-image-footer linkedin" src="/Vectors/linkedin-2.png"/></div></a>
+        
+            </div>
+            <div class="bottom-social social-2">
+                <a href="https://www.instagram.com/vit.bhopal/reels/" target="_blank"><div class="social-container "><img class="social-image-footer instagram" src="/Vectors/instagram.png" /></div></a>    
+           
+            </div>
+            <div class="bottom-social social-3">
+                <a href="https://www.facebook.com/VITUnivBhopal/" target="_blank"><div class="social-container"><img class="social-image-footer facebook" src="/Vectors/facebook.png" /></div></a>
+              
+            </div>
+        </div>
+        </div>
+        <div class="bottom-address-container">  
+                <h3>Address</h3>
+                <p> Bhopal-Indore Highway, Kothri kalan, Sehore, Madhya Pradesh – 466114 </p>
+                <p> +91/0 75 6025 4500 / 501 / 502 </p>
+        </div>
+
+        <div class="bottom-links-container">
+                <h3>Links</h3>
+                <div style="text-decoration: underline;"><a href="/">About Us</a></div>
+                <div style="text-decoration: underline;"><a href="/faculty_page/">Faculty Details</a></div>
+                <div style="text-decoration: underline;"><a href="/login">Login as Faculty</a></div>
+                <!-- <div style="text-decoration: underline;"><a href="">Events</a></div>
+                <div style="text-decoration: underline;"><a href="">Projects</a></div> -->
+          
+        </div>
+    </section>
+
+</body>
+</html>

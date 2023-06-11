@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty-Details-Inner</title>
+
+     <!-- Style Sheets -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     <link rel="stylesheet" href="/css/faculty_detail_styles.css">
+     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300;400;700&display=swap" rel="stylesheet">
+     <!-- PT Serif font -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <section id="top-container">
+        <div class="nav">
+            <div class = "header">
+                <img src="/Images/vit bhopal logo white text.png">
+                <div> | </div>
+                <div> Facul-Deets </div>    
+                <div class="header-facultyLogin"> <a href="/login">Login as Faculty</a> </div>
+                <!-- <span> | </span>
+                <span> Facul-Deets </span> -->
+            </div>
+            <div class="text-container" >
+                <div class="c1"><a href="/">About Us</a></div>
+                <div class="c2"><a href="/faculty_page/">Faculty Details</a></div>
+                <!-- <div class="c3"><a href="">Events</a></div>
+                <div class="c4"><a href="">Projects</a></div> -->
+            </div>
+        </div>
+
+        <div class="middle-container">
+            <div class="area-1">
+                    <img src="/Vectors/profile.png">
+                <p><%= name %>, <%= department %></p>
+                <p><%= id %></p>
+                <br>
+                <p><strong>Cabin:</strong> <%= cabin %></p>
+                <br><hr>
+                <div class="heading"> <em>Socials</em> </div>
+
+                <div class="social-items items">
+                    <div class="column-flex">
+                        <img class="social-image" src="/Vectors/linkedin.png"/>
+                        <p> LinkedIn Profile: <a class="body-anchor" href="<%= linkedin %>">Click me to Redirect</a></p>
+                    </div>
+                    <div class="column-flex">
+                        <img class="social-image" src="/Vectors/facebook.png">
+                        <p> Email: <%= email %></p>
+                    </div>
+                    <div class="column-flex">
+                        <img class="social-image" src="/Vectors/globe.png">
+                        <p> Website: <a class="body-anchor" href="<%= website %>">Click me to Redirect</a></p>
+                    </div>
+                </div>
+                <br><hr>
+
+                <div class="heading"> <em>Subjects</em> </div>
+                <div class="heading-items items">
+                    <ul>
+                        <% subject.forEach(function(sub){ %>
+                            <li> <%=sub%> </li>
+                        <%});%>
+                    </ul>
+                </div>
+
+                <br><hr>
+
+                <div class="heading"> <em>Research and Projects</em> </div>
+                <div class="research-items items">
+                    <div class="column-flex">
+                        <img class="research-image" src="/Vectors/projects.png"/>
+                        <p> <%= project %></p>
+                    </div>
+
+                    <div class="column-flex">
+                        <img class="research-image" src="/Vectors/book.png"/>
+                        <p> <%= research %></p>
+                    </div>
+                </div>
+                <p class="research-p"> For additional details: <a class="body-anchor" href="https://vitbhopal.irins.org/" target="_blank" style="text-decoration: underline;">IRINS </a></p>
+                
+                <br><hr>
+
+                <div class="heading"> <em>Education Details</em> </div>
+                <div class="heading-items items">
+                    <ul>
+                        <% education.forEach(function(ed){ %>
+                            <li> <%=ed%> </li>
+                        <%});%>
+                    </ul>
+                </div>
+
+                <br><hr>
+
+                <div class="heading"> <em>Extra :</em> </div>
+                <div class="heading-items items">
+                    <ul>
+                        <% bio.forEach(function(b){ %>
+                            <li> <%=b%> </li>
+                        <%});%>
+                    </ul>
+                </div>
+
+
+            </div>
+            
+        </div>
+
+    </section>
+
+    <section id="bottom-container">
+        <div class="bottom-image-container">
+        <div class="bottom-image-container-1">
+            <div class="bottom-social social-1">
+                <a href="https://in.linkedin.com/company/vit-bhopal-university" target="_blank"><div class="social-container"><img class="social-image-footer linkedin" src="/Vectors/linkedin-2.png"/></div></a>
+        
+            </div>
+            <div class="bottom-social social-2">
+                <a href="https://www.instagram.com/vit.bhopal/reels/" target="_blank"><div class="social-container "><img class="social-image-footer instagram" src="/Vectors/instagram.png" /></div></a>    
+           
+            </div>
+            <div class="bottom-social social-3">
+                <a href="https://www.facebook.com/VITUnivBhopal/" target="_blank"><div class="social-container"><img class="social-image-footer facebook" src="/Vectors/facebook.png" /></div></a>
+              
+            </div>
+        </div>
+        </div>
+        <div class="bottom-address-container">  
+                <h3>Address</h3>
+                <p> Bhopal-Indore Highway, Kothri kalan, Sehore, Madhya Pradesh – 466114 </p>
+                <p> +91/0 75 6025 4500 / 501 / 502 </p>
+        </div>
+
+        <div class="bottom-links-container">
+                <h3>Links</h3>
+                <div style="text-decoration: underline;"><a href="/">About Us</a></div>
+                <div style="text-decoration: underline;"><a href="/faculty_page/">Faculty Details</a></div>
+                <div style="text-decoration: underline;"><a href="/login">Login as Faculty</a></div> 
+                <!-- <div style="text-decoration: underline;"><a href="">Events</a></div>
+                <div style="text-decoration: underline;"><a href="">Projects</a></div> -->
+          
+        </div>
+    </section>
+
+</body>
+</html>
+
+

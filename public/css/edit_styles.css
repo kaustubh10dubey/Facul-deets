@@ -1,0 +1,40 @@
+body {
+    background: #2B3258;
+    
+}
+form{
+    /* display: flex;
+
+    justify-content: center;
+    align-content: center; */
+}
+
+.form-element{
+    margin-top: 1rem;
+}
+.complete-form{
+    
+    width: 40%;
+    margin: 0 auto  ; 
+    margin-top: 10rem;
+    padding: 2rem;
+    border-radius: 30px;
+    border: 2px orange solid;
+    background-color: wheat;
+}
+input{
+    margin-left: 1rem;
+    width: 30rem;
+}
+textarea{
+    margin-left: 1rem;
+}
+.textarea{
+    display: flex;
+    align-items: center;
+}
+.form-button{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+}

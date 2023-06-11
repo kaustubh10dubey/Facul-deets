@@ -1,0 +1,27 @@
+img{
+    height: 15vh;
+    width: 80%;
+    
+}
+.mb-5{
+    font-family:'PT Serif', serif;
+}
+.form-label{
+    font-family:'PT Serif', serif;
+}
+div{
+    font-family:'PT Serif', serif;
+}
+
+.text-center > div{
+    font-size: 2rem;
+}
+.compose-div{
+    background-color: lightgray;
+}
+.edit-div{
+    background-color: lightgray;
+}
+.card-anchor{
+    margin-left: 2rem;
+}
